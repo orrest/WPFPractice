@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPractice", "WPFPractice.csproj", "{8B20696A-92AD-4EC6-8CCD-4BE6C64F906D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.2 Binding基础", "..\6.2 Binding基础\6.2 Binding基础.csproj", "{03AFF29C-7164-41BB-B3EC-8E9BF82926C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_3_Binding的源与路径", "..\6_3_Binding的源与路径\6_3_Binding的源与路径.csproj", "{926324D3-3AAC-4F5B-8EC9-5CFB06DB9E28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_3_Binding的源与路径_多级绑定", "..\6_3_Binding的源与路径_多级绑定\6_3_Binding的源与路径_多级绑定.csproj", "{BF47B2E0-0F9B-4F91-A622-2FC1405CDF35}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_3_Binding的源与路径_索引器", "6_3_Binding的源与路径_索引器\6_3_Binding的源与路径_索引器.csproj", "{1173AEEE-19DD-4689-BD67-086E2286F296}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_3_Binding的源与路径_绑定集合中的元素", "6_3_Binding的源与路径_绑定集合中的元素\6_3_Binding的源与路径_绑定集合中的元素.csproj", "{368AF743-4A1C-4DAC-BCBA-459205548219}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B20696A-92AD-4EC6-8CCD-4BE6C64F906D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B20696A-92AD-4EC6-8CCD-4BE6C64F906D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B20696A-92AD-4EC6-8CCD-4BE6C64F906D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B20696A-92AD-4EC6-8CCD-4BE6C64F906D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03AFF29C-7164-41BB-B3EC-8E9BF82926C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AFF29C-7164-41BB-B3EC-8E9BF82926C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AFF29C-7164-41BB-B3EC-8E9BF82926C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AFF29C-7164-41BB-B3EC-8E9BF82926C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{926324D3-3AAC-4F5B-8EC9-5CFB06DB9E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{926324D3-3AAC-4F5B-8EC9-5CFB06DB9E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{926324D3-3AAC-4F5B-8EC9-5CFB06DB9E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{926324D3-3AAC-4F5B-8EC9-5CFB06DB9E28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF47B2E0-0F9B-4F91-A622-2FC1405CDF35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF47B2E0-0F9B-4F91-A622-2FC1405CDF35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF47B2E0-0F9B-4F91-A622-2FC1405CDF35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF47B2E0-0F9B-4F91-A622-2FC1405CDF35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1173AEEE-19DD-4689-BD67-086E2286F296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1173AEEE-19DD-4689-BD67-086E2286F296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1173AEEE-19DD-4689-BD67-086E2286F296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1173AEEE-19DD-4689-BD67-086E2286F296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368AF743-4A1C-4DAC-BCBA-459205548219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368AF743-4A1C-4DAC-BCBA-459205548219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368AF743-4A1C-4DAC-BCBA-459205548219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368AF743-4A1C-4DAC-BCBA-459205548219}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
