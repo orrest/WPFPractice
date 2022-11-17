@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_6_4_Binding对数据的转换与校验_2_数据转换</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\bomber.png" />
+    <None Remove="Icons\fighter.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\bomber.png" />
+    <Resource Include="Icons\fighter.png" />
+  </ItemGroup>
+
+</Project>
