@@ -15,7 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_4_Binding对数据的转�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_4_Binding对数据的转换与校验_2_数据转换", "6_4_Binding对数据的转换与校验_2_数据转换\6_4_Binding对数据的转换与校验_2_数据转换.csproj", "{F8F262D3-AAA2-4386-8B97-89DD54465410}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_5_MultiBinding", "6_5_MultiBinding\6_5_MultiBinding.csproj", "{AA64BD9D-D0F4-45F3-9ED9-627B04FB2826}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_5_MultiBinding", "6_5_MultiBinding\6_5_MultiBinding.csproj", "{AA64BD9D-D0F4-45F3-9ED9-627B04FB2826}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9_1_命令系统_1_小试命令", "9_1_命令系统_1_小试命令\9_1_命令系统_1_小试命令.csproj", "{6D84C266-8550-457B-BE67-4469CC85DB8E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9_1_命令系统_1_5_命令参数", "9_1_命令系统_1_5_命令参数\9_1_命令系统_1_5_命令参数.csproj", "{EA0185D1-38E9-4658-95AC-9B152D7BB8E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvvmDemo", "SimpleMvvmDemo\SimpleMvvmDemo.csproj", "{0A150B36-441F-4DDA-A98B-BE409FAF62A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyElephant", "CrazyElephant\CrazyElephant.csproj", "{165913C1-660C-4F91-B790-BEF293765DBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +59,22 @@ Global
 		{AA64BD9D-D0F4-45F3-9ED9-627B04FB2826}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA64BD9D-D0F4-45F3-9ED9-627B04FB2826}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA64BD9D-D0F4-45F3-9ED9-627B04FB2826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D84C266-8550-457B-BE67-4469CC85DB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D84C266-8550-457B-BE67-4469CC85DB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D84C266-8550-457B-BE67-4469CC85DB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D84C266-8550-457B-BE67-4469CC85DB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0185D1-38E9-4658-95AC-9B152D7BB8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0185D1-38E9-4658-95AC-9B152D7BB8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0185D1-38E9-4658-95AC-9B152D7BB8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0185D1-38E9-4658-95AC-9B152D7BB8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A150B36-441F-4DDA-A98B-BE409FAF62A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A150B36-441F-4DDA-A98B-BE409FAF62A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A150B36-441F-4DDA-A98B-BE409FAF62A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A150B36-441F-4DDA-A98B-BE409FAF62A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165913C1-660C-4F91-B790-BEF293765DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165913C1-660C-4F91-B790-BEF293765DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165913C1-660C-4F91-B790-BEF293765DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165913C1-660C-4F91-B790-BEF293765DBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
