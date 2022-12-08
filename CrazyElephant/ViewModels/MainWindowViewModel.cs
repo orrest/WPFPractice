@@ -52,7 +52,9 @@ namespace CrazyElephant.ViewModels
             this.LoadRestaurant();
             this.LoadDishMenu();
             this.PlaceOrderCommand = new RelayCommand(
-                new Action(this.PlaceOrderCommandExecute));
+                execute: new Action(this.PlaceOrderCommandExecute),
+                canExecute: () => true
+            );
             this.SelectMenuItemCommand = new RelayCommand(
                 new Action(this.SelectMenuItemExecute));
         }
