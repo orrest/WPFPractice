@@ -25,15 +25,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMvvmDemo", "SimpleMvv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrazyElephant", "CrazyElephant\CrazyElephant.csproj", "{165913C1-660C-4F91-B790-BEF293765DBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_4_UI布局_Grid", "5_4_UI布局_Grid\5_4_UI布局_Grid.csproj", "{315DC47C-6E4B-47AF-BEC7-78A67B5AB9CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_4_UI布局_Grid", "5_4_UI布局_Grid\5_4_UI布局_Grid.csproj", "{315DC47C-6E4B-47AF-BEC7-78A67B5AB9CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_4_UI布局_StackPanel", "5_4_UI布局_StackPanel\5_4_UI布局_StackPanel.csproj", "{A909E1AE-E244-4842-B909-8F4CDF8C2DD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_4_UI布局_StackPanel", "5_4_UI布局_StackPanel\5_4_UI布局_StackPanel.csproj", "{A909E1AE-E244-4842-B909-8F4CDF8C2DD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_4_UI布局_Canvas", "5_4_UI布局_Canvas\5_4_UI布局_Canvas.csproj", "{99058564-5928-4312-87B3-A2DE922ED8AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_4_UI布局_Canvas", "5_4_UI布局_Canvas\5_4_UI布局_Canvas.csproj", "{99058564-5928-4312-87B3-A2DE922ED8AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_4_UI布局_DockPanel", "5_4_UI布局_DockPanel\5_4_UI布局_DockPanel.csproj", "{A0C834A4-D37E-4BC6-9400-FDC91F4D03E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_4_UI布局_DockPanel", "5_4_UI布局_DockPanel\5_4_UI布局_DockPanel.csproj", "{A0C834A4-D37E-4BC6-9400-FDC91F4D03E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_4_UI布局_WrapPanel", "5_4_UI布局_WrapPanel\5_4_UI布局_WrapPanel.csproj", "{08F45C13-C9BC-4A62-96AC-39CD4FEDF6DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_4_UI布局_WrapPanel", "5_4_UI布局_WrapPanel\5_4_UI布局_WrapPanel.csproj", "{08F45C13-C9BC-4A62-96AC-39CD4FEDF6DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMSampleAppWpf", "MVVMSampleAppWpf\MVVMSampleAppWpf.csproj", "{B44AEB95-44BC-4B86-82CE-5019E76F42EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollViewer", "ScrollViewer\ScrollViewer.csproj", "{35FCFFB7-2768-49B1-B092-56F1B8C924D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +109,14 @@ Global
 		{08F45C13-C9BC-4A62-96AC-39CD4FEDF6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08F45C13-C9BC-4A62-96AC-39CD4FEDF6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08F45C13-C9BC-4A62-96AC-39CD4FEDF6DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B44AEB95-44BC-4B86-82CE-5019E76F42EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44AEB95-44BC-4B86-82CE-5019E76F42EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44AEB95-44BC-4B86-82CE-5019E76F42EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44AEB95-44BC-4B86-82CE-5019E76F42EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35FCFFB7-2768-49B1-B092-56F1B8C924D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35FCFFB7-2768-49B1-B092-56F1B8C924D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35FCFFB7-2768-49B1-B092-56F1B8C924D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35FCFFB7-2768-49B1-B092-56F1B8C924D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
