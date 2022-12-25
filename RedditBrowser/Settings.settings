@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RedditBrowser" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Topic1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">microsoft</Value>
+    </Setting>
+    <Setting Name="Topic2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">dotnet</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="_11_5_Style_demo3_MultiTrigger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_11_5_Style_demo3_MultiTrigger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Window.Resources>
+        <!--CheckBox Multi Condition Trigger-->
+        <Style TargetType="CheckBox">
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsChecked" Value="True"/>
+                        <Condition Property="Content" Value="正如我悄悄地来"/>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="Foreground" Value="Orange"/>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        
+    </Window.Resources>
+
+    <StackPanel>
+        <CheckBox Content="悄悄地我走了" Margin="5"/>
+        <CheckBox Content="正如我悄悄地来" Margin="5"/>
+        <CheckBox Content="我挥一挥衣袖" Margin="5"/>
+        <CheckBox Content="不带走一片云彩" Margin="5"/>
+    </StackPanel>
+</Window>
