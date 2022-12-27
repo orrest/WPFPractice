@@ -1,0 +1,9 @@
+﻿<Application x:Class="_12_4_1_简单动画_关键帧动画.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_12_4_1_简单动画_关键帧动画"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
