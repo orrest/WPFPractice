@@ -1,6 +1,5 @@
-﻿using System.Diagnostics;
-using System.Windows;
-using MongoDB.Driver;
+﻿using System.Windows;
+using Microsoft.Extensions.Options;
 
 namespace MongoDBCRUD
 {
@@ -9,27 +8,12 @@ namespace MongoDBCRUD
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(IOptions<YourClassName> secrets)
         {
             InitializeComponent();
-
+            _secrets = secrets.Value;
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            var connStr = "mongodb+srv://zzhxufeng:xF092619@freeazuredb.yg9rj0r.mongodb.net/?retryWrites=true&w=majority";
-
-            var settings = MongoClientSettings.FromConnectionString(connStr);
-            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
-            var client = new MongoClient(settings);
-            var database = client.GetDatabase("sample_weatherdata");
-
-            var dbList = database.ListCollectionNames().ToList();
-
-            foreach (var item in dbList)
-            {
-                Debug.WriteLine(item);
-            }
-        }
+        private readonly YourClassName _secrets;
     }
 }
