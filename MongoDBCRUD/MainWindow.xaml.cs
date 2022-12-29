@@ -8,12 +8,12 @@ namespace MongoDBCRUD
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(IOptions<YourClassName> secrets)
+        public MainWindow(IOptions<ConnectionStrings> secrets)
         {
             InitializeComponent();
             _secrets = secrets.Value;
         }
 
-        private readonly YourClassName _secrets;
+        private readonly ConnectionStrings _secrets;
     }
 }

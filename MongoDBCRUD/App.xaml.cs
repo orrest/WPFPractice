@@ -29,11 +29,11 @@ namespace MongoDBCRUD
             var builder = new ConfigurationBuilder()
                         .SetBasePath(Directory.GetCurrentDirectory())
                         .AddJsonFile("secrets.json", optional: false, reloadOnChange: true)
-                        .AddUserSecrets<YourClassName>()
+                        .AddUserSecrets<ConnectionStrings>()
                         .AddEnvironmentVariables().Build();
 
             var services = new ServiceCollection()
-                .Configure<YourClassName>(builder.GetSection(nameof(YourClassName)))
+                .Configure<ConnectionStrings>(builder.GetSection(nameof(ConnectionStrings)))
                 .AddOptions()
                 .AddSingleton<MainWindow>()
                 .BuildServiceProvider();
@@ -48,9 +48,8 @@ namespace MongoDBCRUD
         }
     }
 
-    public class YourClassName
+    public class ConnectionStrings
     {
-        public string Secret1 { get; set; }
-        public string Secret2 { get; set; }
+        public string MongoDB { get; set; }
     }
 }
