@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MongoDBCRUD.Services;
+using MongoDBCRUD.ViewModels;
 using System;
 using System.Configuration;
 using System.IO;
@@ -35,6 +37,8 @@ namespace MongoDBCRUD
             var services = new ServiceCollection()
                 .Configure<ConnectionStrings>(builder.GetSection(nameof(ConnectionStrings)))
                 .AddOptions()
+                .AddSingleton<MongoDBSerivce>()
+                .AddSingleton<MainWindowViewModel>()
                 .AddSingleton<MainWindow>()
                 .BuildServiceProvider();
 

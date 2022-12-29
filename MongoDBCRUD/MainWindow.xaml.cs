@@ -1,5 +1,6 @@
 ﻿using System.Windows;
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.DependencyInjection;
+using MongoDBCRUD.ViewModels;
 
 namespace MongoDBCRUD
 {
@@ -8,12 +9,10 @@ namespace MongoDBCRUD
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(IOptions<ConnectionStrings> secrets)
+        public MainWindow()
         {
             InitializeComponent();
-            _secrets = secrets.Value;
+            this.DataContext = App.Current.Services.GetService<MainWindowViewModel>();
         }
-
-        private readonly ConnectionStrings _secrets;
     }
 }
