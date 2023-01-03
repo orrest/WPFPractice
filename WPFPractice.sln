@@ -67,7 +67,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_4_1_简单动画_路径�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_4_2_Storyboard_demo1", "12_4_2_Storyboard_demo1\12_4_2_Storyboard_demo1.csproj", "{85BF2C1F-41B9-41EF-8614-7A888AB6DCD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBCRUD", "MongoDBCRUD\MongoDBCRUD.csproj", "{60E37A63-DEE6-4761-8A8C-9042456B19EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDBDemo", "MongoDBCRUD\MongoDBDemo.csproj", "{60E37A63-DEE6-4761-8A8C-9042456B19EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

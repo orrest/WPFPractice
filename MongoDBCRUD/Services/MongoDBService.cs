@@ -1,7 +1,8 @@
-
 using Microsoft.Extensions.Options;
+using MongoDB.Bson;
 using MongoDB.Driver;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MongoDBCRUD.Services;
 
@@ -14,17 +15,21 @@ public class MongoDBSerivce
 	{
         _secrets = secrets.Value;
 
-        string connStr = _secrets.MongoDB;
-        _client = new MongoClient(connStr);
+        try
+        {
+            string connStr = _secrets.MongoDB;
+            _client = new MongoClient(connStr);
+        }
+        catch (System.Exception ex)
+        {
+            throw;
+        }
     }
 
-    public async void GetDatabaseNamesAsync()
+    public async Task<List<BsonDocument>> GetDatabaseNamesAsync()
     {
-        var databases = await _client.ListDatabaseNamesAsync();
-        var databasesList = databases.ToList();
-        foreach (var item in databasesList)
-        {
-            Debug.WriteLine(item);
-        }
+        var databases = await _client.ListDatabasesAsync();
+        
+        return databases.ToList();
     }
 }

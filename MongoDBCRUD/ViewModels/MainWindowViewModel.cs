@@ -1,7 +1,8 @@
-
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using MongoDBCRUD.Models;
 using MongoDBCRUD.Services;
+using System.Collections.ObjectModel;
 
 namespace MongoDBCRUD.ViewModels;
 
@@ -13,9 +14,25 @@ public partial class MainWindowViewModel: ObservableObject
 		this._mongoDBSerivce = mongoDBSerivce;
 	}
 
+	[ObservableProperty]
+	public ObservableCollection<DatabaseNameModel> databaseNames = new();
+
 	[RelayCommand]
-	private void LogDatabaseNames()
+	private async void LogDatabaseNames()
 	{
-		this._mongoDBSerivce.GetDatabaseNamesAsync();
+		var db = await this._mongoDBSerivce.GetDatabaseNamesAsync();
+
+		/*
+		 * 将BsonDocument类型转换成对应的Model的同时, 更新List
+		 */
+		databaseNames.Clear();
+		foreach (var item in db)
+		{
+			databaseNames.Add(
+				new DatabaseNameModel(
+					name: (string)item["name"],
+					sizeOnDisk: (long)item["sizeOnDisk"],
+					isEmpty: (bool)item["empty"]));
+		}
 	} 
 }
