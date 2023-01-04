@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_4_UI布局_DockPanel", "5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_4_UI布局_WrapPanel", "5_4_UI布局_WrapPanel\5_4_UI布局_WrapPanel.csproj", "{08F45C13-C9BC-4A62-96AC-39CD4FEDF6DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVVMSampleAppWpf", "MVVMSampleAppWpf\MVVMSampleAppWpf.csproj", "{B44AEB95-44BC-4B86-82CE-5019E76F42EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Navigation", "Navigation\Navigation.csproj", "{B44AEB95-44BC-4B86-82CE-5019E76F42EB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScrollViewer", "ScrollViewer\ScrollViewer.csproj", "{35FCFFB7-2768-49B1-B092-56F1B8C924D8}"
 EndProject
