@@ -9,6 +9,6 @@
       Title="Buttons">
 
     <Grid>
-        <TextBlock Text="Buttons" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="{Binding Content}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
 </Page>
