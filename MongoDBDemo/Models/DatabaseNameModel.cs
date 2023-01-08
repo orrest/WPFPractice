@@ -1,4 +1,4 @@
-﻿namespace MongoDBCRUD.Models
+﻿namespace MongoDBDemo.Models
 {
     public record DatabaseNameModel
     {
@@ -11,6 +11,14 @@
             this.Name = name;
             this.SizeOnDisk = sizeOnDisk;
             this.IsEmpty = isEmpty;
+        }
+
+        public string Description { 
+            get
+            {
+                return $"{this.Name}\t{this.SizeOnDisk}\t{this.IsEmpty}\t";
+            }
+            set { this.Description = value ; }
         }
     }
 }

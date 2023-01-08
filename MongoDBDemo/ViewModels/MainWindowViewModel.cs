@@ -1,38 +1,27 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using MongoDBCRUD.Models;
-using MongoDBCRUD.Services;
-using System.Collections.ObjectModel;
 
-namespace MongoDBCRUD.ViewModels;
+namespace MongoDBDemo.ViewModels;
 
 public partial class MainWindowViewModel: ObservableObject
 {
-	private readonly MongoDBSerivce _mongoDBSerivce;
-	public MainWindowViewModel(MongoDBSerivce mongoDBSerivce)
-	{
-		this._mongoDBSerivce = mongoDBSerivce;
-	}
+    [ObservableProperty]
+    public string currentPage;
 
-	[ObservableProperty]
-	public ObservableCollection<DatabaseNameModel> databaseNames = new();
+    public MainWindowViewModel()
+    {
+        CurrentPage = "/Views/ContentPage.xaml";
+    }
 
-	[RelayCommand]
-	private async void LogDatabaseNames()
-	{
-		var db = await this._mongoDBSerivce.GetDatabaseNamesAsync();
+    [RelayCommand]
+    public void NavigateToContent()
+    {
+        CurrentPage = "/Views/ContentPage.xaml";
+    }
 
-		/*
-		 * 将BsonDocument类型转换成对应的Model的同时, 更新List
-		 */
-		databaseNames.Clear();
-		foreach (var item in db)
-		{
-			databaseNames.Add(
-				new DatabaseNameModel(
-					name: (string)item["name"],
-					sizeOnDisk: (long)item["sizeOnDisk"],
-					isEmpty: (bool)item["empty"]));
-		}
-	} 
+    [RelayCommand]
+    public void NavigateToMongoDB()
+    {
+        CurrentPage = "/Views/MongoDBPage.xaml";
+    }
 }
