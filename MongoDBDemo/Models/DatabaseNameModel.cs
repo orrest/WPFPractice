@@ -1,4 +1,4 @@
-﻿namespace MongoDBCRUD.Models
+﻿namespace MongoDBDemo.Models
 {
     public record DatabaseNameModel
     {

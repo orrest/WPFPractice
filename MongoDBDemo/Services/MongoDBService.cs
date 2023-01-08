@@ -4,7 +4,7 @@ using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MongoDBCRUD.Services;
+namespace MongoDBDemo.Services;
 
 public class MongoDBSerivce
 {

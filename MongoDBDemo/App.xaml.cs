@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MongoDBCRUD.Services;
-using MongoDBCRUD.ViewModels;
+using MongoDBDemo.Models;
+using MongoDBDemo.Services;
+using MongoDBDemo.ViewModels;
 using System;
-using System.Configuration;
 using System.IO;
 using System.Windows;
 
-namespace MongoDBCRUD
+namespace MongoDBDemo
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -38,6 +38,8 @@ namespace MongoDBCRUD
                 .Configure<ConnectionStrings>(builder.GetSection(nameof(ConnectionStrings)))
                 .AddOptions()
                 .AddSingleton<MongoDBSerivce>()
+                .AddSingleton<ContentPageViewModel>()
+                .AddSingleton<MongoDBPageViewModel>()
                 .AddSingleton<MainWindowViewModel>()
                 .AddSingleton<MainWindow>()
                 .BuildServiceProvider();

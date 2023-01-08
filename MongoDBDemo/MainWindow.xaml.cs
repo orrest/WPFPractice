@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
-using MongoDBCRUD.ViewModels;
+using MongoDBDemo.ViewModels;
 
-namespace MongoDBCRUD
+namespace MongoDBDemo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
