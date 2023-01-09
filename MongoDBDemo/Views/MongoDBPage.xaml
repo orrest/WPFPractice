@@ -7,37 +7,35 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="400"
       Title="MongoDBPage">
-    <Page.Resources>
-        <local:TextIsEnterConverter x:Key="textIsEnterConverter"/>
-        <Style TargetType="TextBox">
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Margin" Value="2 1 2 1"/>
-            <Style.Triggers>
-                <DataTrigger
-                    Binding="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=Text, Converter={StaticResource textIsEnterConverter}}" 
-                    Value="true">
-
-                    <DataTrigger.Setters>
-                        <Setter Property="FontSize" Value="24"/>
-                        <Setter Property="FontWeight" Value="Bold"/>
-                    </DataTrigger.Setters>
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>    
-    </Page.Resources>
-    
-    <StackPanel>
-        <Button Content="Click to get database names"
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Button Grid.Row="0" Grid.Column="0"
+            Content="Click to get database names"
                 Command="{Binding LogDatabaseNamesCommand}"/>
 
-        <ListBox ItemsSource="{Binding DatabaseNames}" Height="400">
+        <ListBox Grid.Row="1" Grid.Column="0"
+            ItemsSource="{Binding DatabaseNames}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBox Text="{Binding Description}"/>
-                    </StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox 
+                            TextWrapping="Wrap"
+                                 AcceptsReturn="True"
+                                 FontSize="{Binding FontSize}"
+                                 Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-    </StackPanel>
+    </Grid>
 </Page>

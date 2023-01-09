@@ -14,7 +14,7 @@ namespace MongoDBDemo.Models
         }
 
         [ObservableProperty]
-        public ObservableCollection<DatabaseNameModel> databaseNames = new();
+        public ObservableCollection<TextBoxViewModel> databaseNames = new();
 
         [RelayCommand]
         private async void LogDatabaseNames()
@@ -30,11 +30,35 @@ namespace MongoDBDemo.Models
             foreach (var item in db)
             {
                 databaseNames.Add(
-                    new DatabaseNameModel(
+                    new TextBoxViewModel(new DatabaseNameModel(
                         name: (string)item["name"],
                         sizeOnDisk: (long)item["sizeOnDisk"],
-                        isEmpty: (bool)item["empty"]));
+                        isEmpty: (bool)item["empty"]))
+                    );
             }
+        }
+    }
+
+    partial class TextBoxViewModel: ObservableObject
+    {
+        [ObservableProperty]
+        private string description;
+
+        [ObservableProperty]
+        private double fontSize = 20.0;
+
+        partial void OnDescriptionChanged(string value)
+        {
+            if (Description.StartsWith("/h1"))
+            {
+                Description = value.Replace("/h1", "");
+                FontSize = 40.0;
+            }
+        }
+
+        public TextBoxViewModel(DatabaseNameModel dbnm)
+        {
+            this.description = dbnm.Description;
         }
     }
 }
