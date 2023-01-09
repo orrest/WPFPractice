@@ -25,7 +25,7 @@
             </Style.Triggers>
         </Style>    
     </Page.Resources>
-    
+
     <StackPanel>
         <Button Content="Click to get database names"
                 Command="{Binding LogDatabaseNamesCommand}"/>
