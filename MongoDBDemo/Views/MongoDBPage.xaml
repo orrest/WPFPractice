@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="400"
       Title="MongoDBPage">
-    <Grid >
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
@@ -20,22 +20,44 @@
             Content="Click to get database names"
                 Command="{Binding LogDatabaseNamesCommand}"/>
 
-        <ListBox Grid.Row="1" Grid.Column="0"
-            ItemsSource="{Binding DatabaseNames}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBox 
-                            TextWrapping="Wrap"
-                                 AcceptsReturn="True"
-                                 FontSize="{Binding FontSize}"
-                                 Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <ScrollViewer  Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Disabled">
+            <ItemsControl
+                ItemsSource="{Binding DatabaseNames}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+
+                            <TextBox 
+                                HorizontalAlignment="Stretch"
+                                TextWrapping="Wrap"
+                                     AcceptsReturn="True"
+                                     FontSize="{Binding FontSize}"
+                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox 
+                                TextWrapping="Wrap"
+                                     AcceptsReturn="True"
+                                     FontSize="{Binding FontSize}"
+                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox 
+                                TextWrapping="Wrap"
+                                     AcceptsReturn="True"
+                                     FontSize="{Binding FontSize}"
+                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox 
+                                TextWrapping="Wrap"
+                                     AcceptsReturn="True"
+                                     FontSize="{Binding FontSize}"
+                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox 
+                                TextWrapping="Wrap"
+                                     AcceptsReturn="True"
+                                     FontSize="{Binding FontSize}"
+                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
     </Grid>
 </Page>
