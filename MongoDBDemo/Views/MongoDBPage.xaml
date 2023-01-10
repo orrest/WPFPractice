@@ -15,49 +15,28 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <Button Grid.Row="0" Grid.Column="0"
             Content="Click to get database names"
                 Command="{Binding LogDatabaseNamesCommand}"/>
 
-        <ScrollViewer  Grid.Row="1" Grid.Column="0" HorizontalScrollBarVisibility="Disabled">
-            <ItemsControl
-                ItemsSource="{Binding DatabaseNames}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
-
-                            <TextBox 
-                                HorizontalAlignment="Stretch"
-                                TextWrapping="Wrap"
-                                     AcceptsReturn="True"
-                                     FontSize="{Binding FontSize}"
-                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
-                            <TextBox 
-                                TextWrapping="Wrap"
-                                     AcceptsReturn="True"
-                                     FontSize="{Binding FontSize}"
-                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
-                            <TextBox 
-                                TextWrapping="Wrap"
-                                     AcceptsReturn="True"
-                                     FontSize="{Binding FontSize}"
-                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
-                            <TextBox 
-                                TextWrapping="Wrap"
-                                     AcceptsReturn="True"
-                                     FontSize="{Binding FontSize}"
-                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
-                            <TextBox 
-                                TextWrapping="Wrap"
-                                     AcceptsReturn="True"
-                                     FontSize="{Binding FontSize}"
-                                     Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
+        <ListView Grid.Row="1" Grid.Column="0"
+                  ItemsSource="{Binding DatabaseNames}"
+                  SelectedIndex="{Binding SelectedIndex, UpdateSourceTrigger=PropertyChanged}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBox TextWrapping="Wrap"
+                             AcceptsReturn="False"
+                             FontSize="{Binding FontSize}"
+                             Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}">
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Return" Command="{Binding AddTextBoxCommand}"/>
+                        </TextBox.InputBindings>
+                    </TextBox>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </Page>

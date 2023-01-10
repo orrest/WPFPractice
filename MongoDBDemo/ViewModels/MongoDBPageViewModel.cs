@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using MongoDBDemo.Services;
 using System.Collections.ObjectModel;
+using System.Windows.Controls;
 
 namespace MongoDBDemo.Models
 {
@@ -15,6 +16,9 @@ namespace MongoDBDemo.Models
 
         [ObservableProperty]
         public ObservableCollection<TextBoxViewModel> databaseNames = new();
+
+        [ObservableProperty]
+        public int selectedIndex = 0;
 
         [RelayCommand]
         private async void LogDatabaseNames()
@@ -33,9 +37,20 @@ namespace MongoDBDemo.Models
                     new TextBoxViewModel(new DatabaseNameModel(
                         name: (string)item["name"],
                         sizeOnDisk: (long)item["sizeOnDisk"],
-                        isEmpty: (bool)item["empty"]))
-                    );
+                        isEmpty: (bool)item["empty"]),
+                        this
+                    ));
             }
+        }
+
+        [RelayCommand]
+        public void AddTextBox()
+        {
+            databaseNames.Insert(
+                selectedIndex,
+                new TextBoxViewModel(
+                    new DatabaseNameModel("the new added one", 10, true), 
+                    this));
         }
     }
 
@@ -45,20 +60,29 @@ namespace MongoDBDemo.Models
         private string description;
 
         [ObservableProperty]
-        private double fontSize = 20.0;
+        private double fontSize = 16.0;
+
+        private MongoDBPageViewModel parentVm;
 
         partial void OnDescriptionChanged(string value)
         {
-            if (Description.StartsWith("/h1"))
+            if (Description.StartsWith("/1"))
             {
-                Description = value.Replace("/h1", "");
-                FontSize = 40.0;
+                Description = value.Replace("/1", "");
+                FontSize = 22.0;
             }
         }
 
-        public TextBoxViewModel(DatabaseNameModel dbnm)
+        public TextBoxViewModel(DatabaseNameModel dbnm, MongoDBPageViewModel parentVm)
         {
             this.description = dbnm.Description;
+            this.parentVm = parentVm;
+        }
+
+        [RelayCommand]
+        private void AddTextBox()
+        {
+            parentVm.AddTextBoxCommand.Execute(null);
         }
     }
 }
