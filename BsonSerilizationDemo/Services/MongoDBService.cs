@@ -48,10 +48,14 @@ namespace BsonSerilizationDemo.Services
 
     public class Book
     {
-        [BsonElement]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
+        [BsonElement("name")]
         public string Name { get; set; }
 
-        [BsonElement]
+        [BsonElement("sold")]
         public bool Sold { get; set; }
     }
 }
