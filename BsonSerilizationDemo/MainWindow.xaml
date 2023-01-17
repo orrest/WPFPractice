@@ -10,6 +10,7 @@
         <CheckBox IsChecked="{Binding Sold}"/>
         <TextBlock Text="{Binding Name}"/>
 
-        <Button Content="人与自然" Command="{Binding GetBookByNameCommand}"/>
+        <Button Content="人与自然" Command="{Binding GetMagazineByNameCommand}"/>
+        <Button Content="Add a book" Command="{Binding PutBookCommand}"/>
     </StackPanel>
 </Window>

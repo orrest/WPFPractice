@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Options;
+﻿using BsonSerilizationDemo.Models;
+using Microsoft.Extensions.Options;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,27 +35,21 @@ namespace BsonSerilizationDemo.Services
             return databases.ToList();
         }
 
-        public async Task<Book> GetBookByNameAsync(string name)
+        public async Task<Magazine> GetMagazineByNameAsync(string name)
         {
-            var filter = Builders<Book>.Filter.Eq(b => b.Name, name);
+            var filter = Builders<Magazine>.Filter.Eq(b => b.Name, name);
 
             var db = _client.GetDatabase("library");
-            var cl = db.GetCollection<Book>("magazines");
-            var book = await cl.FindAsync<Book>(filter);
-            return book.FirstOrDefault<Book>();
+            var cl = db.GetCollection<Magazine>("magazines");
+            var book = await cl.FindAsync<Magazine>(filter);
+            return book.FirstOrDefault<Magazine>();
         }
-    }
 
-    public class Book
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-
-        [BsonElement("name")]
-        public string Name { get; set; }
-
-        [BsonElement("sold")]
-        public bool Sold { get; set; }
+        public void PutBookAsync()
+        {
+            var db = _client.GetDatabase("library");
+            var cl = db.GetCollection<Book>("books");
+            cl.InsertOneAsync(new Book { ISBN = "I AM AN ISBN", Name = "I AN A NAME"});
+        }
     }
 }
