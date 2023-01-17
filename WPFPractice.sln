@@ -71,7 +71,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDBDemo", "MongoDBDemo\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddControls", "AddControls\AddControls.csproj", "{9EDD587A-52AA-4571-91CE-0B5B30BF8750}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BsonSerilizationDemo", "BsonSerilizationDemo\BsonSerilizationDemo.csproj", "{8DB450CA-A370-44EB-886D-A2C0ED30B962}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BsonSerilizationDemo", "BsonSerilizationDemo\BsonSerilizationDemo.csproj", "{8DB450CA-A370-44EB-886D-A2C0ED30B962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalSQLDBDemo", "LocalSQLDBDemo\LocalSQLDBDemo.csproj", "{70128820-7ABE-4B50-AE12-311ABB203016}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -219,6 +221,10 @@ Global
 		{8DB450CA-A370-44EB-886D-A2C0ED30B962}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DB450CA-A370-44EB-886D-A2C0ED30B962}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DB450CA-A370-44EB-886D-A2C0ED30B962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70128820-7ABE-4B50-AE12-311ABB203016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70128820-7ABE-4B50-AE12-311ABB203016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70128820-7ABE-4B50-AE12-311ABB203016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70128820-7ABE-4B50-AE12-311ABB203016}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
