@@ -35,18 +35,37 @@ namespace BsonSerilizationDemo.Services
             return databases.ToList();
         }
 
-        public async Task<Book> GetBookByNameAsync(string name)
+        public async Task<Magzine> GetMagazineByNameAsync(string name)
         {
-            var filter = Builders<Book>.Filter.Eq(b => b.Name, name);
+            var filter = Builders<Magzine>.Filter.Eq(b => b.Name, name);
 
             var db = _client.GetDatabase("library");
-            var cl = db.GetCollection<Book>("magazines");
-            var book = await cl.FindAsync<Book>(filter);
-            return book.FirstOrDefault<Book>();
+            var cl = db.GetCollection<Magzine>("magazines");
+            var book = await cl.FindAsync<Magzine>(filter);
+            return book.FirstOrDefault<Magzine>();
+        }
+
+        public void PutBookAsync()
+        {
+            var db = _client.GetDatabase("library");
+            var cl = db.GetCollection<Book>("books");
+            cl.InsertOneAsync(new Book { ISBN = "I AM AN ISBN", Name = "I AN A NAME"});
         }
     }
-
     public class Book
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
+        [BsonElement("name")]
+        public string Name { get; set; }
+
+        [BsonElement("ISBN")]
+        public string ISBN { get; set; }
+    }
+
+    public class Magzine
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

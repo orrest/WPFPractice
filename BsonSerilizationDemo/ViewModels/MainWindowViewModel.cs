@@ -19,14 +19,20 @@ namespace BsonSerilizationDemo.ViewModels
         }
 
         [RelayCommand]
-        private async void GetBookByName()
+        private async void GetMagazineByName()
         {
-            var book = await _service.GetBookByNameAsync("人与自然");
+            var book = await _service.GetMagazineByNameAsync("人与自然");
 
             if (book == null) { return; }
 
             Name = book.Name;
             Sold = book.Sold;
+        }
+
+        [RelayCommand]
+        private void PutBook()
+        {
+            _service.PutBookAsync();
         }
     }
 }
