@@ -15,5 +15,13 @@ namespace LocalSQLDBDemo.Services
             optionsBuilder.UseSqlite("Data Source=products.db");
             optionsBuilder.UseLazyLoadingProxies();
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(
+                typeof(ProductEntityConfig).Assembly
+            );
+        }
     }
 }
