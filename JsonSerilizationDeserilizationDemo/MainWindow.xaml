@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JsonSerilizationDeserilizationDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="100" Width="400">
+        Title="MainWindow" Height="400" Width="400">
     <StackPanel>
         <TextBlock x:Name="textBlock" TextWrapping="Wrap"/>
         <Button x:Name="sButton" Content="Serialize" Click="button_Click"/>
         <Button x:Name="dButton" Content="Derialize" Click="dButton_Click"/>
+        <Button x:Name="collectionSButton" Content="CollectionSerialize" Click="cSButton_Click"/>
+        <Button x:Name="collectionDButton" Content="CollectionDerialize" Click="cDButton_Click"/>
     </StackPanel>
 </Window>
