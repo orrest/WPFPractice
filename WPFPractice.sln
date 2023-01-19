@@ -73,7 +73,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddControls", "AddControls\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BsonSerilizationDemo", "BsonSerilizationDemo\BsonSerilizationDemo.csproj", "{8DB450CA-A370-44EB-886D-A2C0ED30B962}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalSQLDBDemo", "LocalSQLDBDemo\LocalSQLDBDemo.csproj", "{70128820-7ABE-4B50-AE12-311ABB203016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalSQLDBDemo", "LocalSQLDBDemo\LocalSQLDBDemo.csproj", "{70128820-7ABE-4B50-AE12-311ABB203016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSerilizationDeserilizationDemo", "JsonSerilizationDeserilizationDemo\JsonSerilizationDeserilizationDemo.csproj", "{A0E7C99A-3AEC-4D3B-9E41-86FF3E5A6E3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -225,6 +227,10 @@ Global
 		{70128820-7ABE-4B50-AE12-311ABB203016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70128820-7ABE-4B50-AE12-311ABB203016}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70128820-7ABE-4B50-AE12-311ABB203016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E7C99A-3AEC-4D3B-9E41-86FF3E5A6E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E7C99A-3AEC-4D3B-9E41-86FF3E5A6E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E7C99A-3AEC-4D3B-9E41-86FF3E5A6E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E7C99A-3AEC-4D3B-9E41-86FF3E5A6E3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

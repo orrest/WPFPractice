@@ -1,0 +1,14 @@
+﻿<Window x:Class="JsonSerilizationDeserilizationDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JsonSerilizationDeserilizationDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="100" Width="400">
+    <StackPanel>
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap"/>
+        <Button x:Name="sButton" Content="Serialize" Click="button_Click"/>
+        <Button x:Name="dButton" Content="Derialize" Click="dButton_Click"/>
+    </StackPanel>
+</Window>
