@@ -81,7 +81,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BehaviourDemo", "BehaviourD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropertyInTextBoxAndResource", "PropertyInTextBoxAndResource\PropertyInTextBoxAndResource.csproj", "{84A128F7-8FB7-4BE3-9A4B-6495694E8C33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichTextBoxDemo", "RichTextBoxDemo\RichTextBoxDemo.csproj", "{FC668413-A0B6-4792-A2F2-C9BACA4636D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RichTextBoxDemo", "RichTextBoxDemo\RichTextBoxDemo.csproj", "{FC668413-A0B6-4792-A2F2-C9BACA4636D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDemo", "EventDemo\EventDemo.csproj", "{D8A67777-F59A-4E55-B1CF-FA07A2130387}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,10 @@ Global
 		{FC668413-A0B6-4792-A2F2-C9BACA4636D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC668413-A0B6-4792-A2F2-C9BACA4636D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC668413-A0B6-4792-A2F2-C9BACA4636D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8A67777-F59A-4E55-B1CF-FA07A2130387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A67777-F59A-4E55-B1CF-FA07A2130387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A67777-F59A-4E55-B1CF-FA07A2130387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A67777-F59A-4E55-B1CF-FA07A2130387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
